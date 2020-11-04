@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        body {
+          margin: 7px;
+        }
+        #manufacturer {
+          display: grid;
+          grid-template-columns: 100px 100px 100px;
+        }
+
+        #manufacturer > button {
+          margin: 2px;
+
+        }
+
+        a {
+          text-decoration: none;
+        }
+    </style>
+  </head>
+  <body>
+      <h1 style = "text-align: center; color: blue;"><a href = "{% url 'UsedCar:main' %}">똑똑한 중고차<a></h1>
+      <form action="{% url 'UsedCar:survey' %}" method = "post">
+        <div class="form-group">
+          <label for="accident_history">사고이력</label>
+          <input type="text" class="form-control" id="accident_history" name = 'accident_history' placeholder="사고이력의 유무를 적어 주세요." style = "width: 20%">
+
+          <label for="repair_history">수리내역</label>
+          <input type="text" class="form-control" id="repair_history" name = 'repair_history' placeholder="구체적인 수리 내역을 작성해 주세요." style = "width: 20%">
+
+          <label for="manufacturer">제조사</label>
+          <input type="text" class="form-control" id="manufacturer" name = 'manufacturer' placeholder="자동차의 제조사를 적어 주세요." style = "width: 20%">
+            <br>
+        </div>
+        <input type="submit" class = "btn btn-outline-primary btn-md" value="Submit" name="submit">
+        {% csrf_token %}
+      </form>
+
+  </body>
+</html>
+
+<!-- <h3>사고이력</h3>
+<p><textarea placeholder="사고이력의 유무를 적어 주세요." style = "width: 20%"></textarea></p>
+
+<h3>수리내역</h3>
+  <p><textarea placeholder="구체적인 수리 내역을 작성해 주세요." style = "width: 20%"></textarea></p>
+
+<h3>제조사</h3>
+<p><textarea placeholder="자동차의 제조사를 적어 주세요." style = "width: 20%"></textarea></p> -->

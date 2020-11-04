@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        body {
+          margin: 7px;
+        }
+        #manufacturer {
+          display: grid;
+          grid-template-columns: 100px 100px 100px;
+        }
+
+        #manufacturer > button {
+          margin: 2px;
+
+        }
+
+        a {
+          text-decoration: none;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- 제플린보고 따라했던 첫 템플릿.. -->
+    <form>
+      <h1 style = "text-align: center; color: blue;"><a href = "http://127.0.0.1:8000/">똑똑한 중고차<a></h1>
+      <h3>사고이력</h3>
+      <button class = "btn btn-outline-primary btn-md" value = "Accident Found">사고 이력 있음</button>
+      <button class = "btn btn-outline-primary btn-md" value = "No Accident Found">사고 이력 없음</button>
+      <br><br>
+
+      <h3>수리내역</h3>
+        <p><textarea placeholder="구체적인 수리 내역을 작성해 주세요." style = "width: 20%"></textarea></p>
+
+      <h3>제조사</h3>
+      <div id = "manufacturer">
+        <button class = "btn btn-outline-primary btn-md" value = "Create">현대</button>
+        <button class = "btn btn-outline-primary btn-md" value = "Create">르노 삼성</button>
+        <button class = "btn btn-outline-primary btn-md" value = "Create">기아</button>
+        <button class = "btn btn-outline-primary btn-md" value = "Create">쌍용</button>
+        <button class = "btn btn-outline-primary btn-md" value = "Create">GM 대우</button>
+        <button class = "btn btn-outline-primary btn-md" value = "Create">기타</button>
+      </div>
+      <br>
+    <p><input type="submit" value="Submit"></p>
+    </form>
+
+  </body>
+</html>
